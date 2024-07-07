@@ -1,0 +1,12 @@
+/* After Effects Expression used here: https://youtu.be/R35FQx33-iE  */
+// Just copy the expression below:
+
+
+
+timeCounter = Math.round(effect("Slider Control")("Slider"))  
+sec = timeCounter%60 
+min = Math.floor(timeCounter/60) 
+
+function addZero(n){ if (n<10) return "0" + n else return n } 
+
+addZero(min) + ":" + addZero(sec)
